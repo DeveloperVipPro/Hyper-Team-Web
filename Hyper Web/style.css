@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* căn giữa ngang */
+    align-items: center;     /* căn giữa dọc */
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* gradient nền */
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* trong suốt nhẹ */
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        background: linear-gradient(90deg, #00ffea, #00c6ff); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #00ffea;
+        animation: glow 1.5s ease-in-out infinite;
+      }
+      @keyframes glow {
+        20% {
+          text-shadow: 0 0 5px rgb(44, 218, 252), 
+                        0 0 10px rgb(44, 218, 252), 
+                        0 0 20px rgb(44, 218, 252);
+        }
+        50% {
+          text-shadow: 0 0 10px rgb(248, 74, 74),
+                        0 0 15px rgb(252, 44, 224),
+                        0 0 20px rgb(252, 44, 224);
+        }
+        80% {
+          text-shadow: 0 0 5px rgb(250, 253, 54), 
+                        0 0 10px rgb(25, 228, 243), 
+                        0 0 20px rgb(10, 247, 61);
+        }
+      }
+      
+  
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); /* responsive */
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  button {
+    height: 100px;
+    width: 100%;               /* fill ô grid */
+    border-radius: 20px;       /* bo tròn */
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  }
+  
+  button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6), 0 0 15px #ff6ec4;
+    background: linear-gradient(135deg, #7873f5, #ff6ec4);
+  }
+  
